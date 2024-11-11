@@ -8,7 +8,7 @@ $request_method = $_SERVER['REQUEST_METHOD'];
 $request_uri = $_SERVER['REQUEST_URI'];
 
 // Base path for the API routes
-$base_path = '/E-commerce/api.php';
+$base_path = '/api.php';
 
 
 // Register Route

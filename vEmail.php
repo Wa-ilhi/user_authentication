@@ -48,8 +48,8 @@ class EmailVerification {
                 return;
             }
 
-            // Mark the user as verified and update `expires_at` to 1 in `user_verifications`
-            $updateStmt = $this->db->prepare('UPDATE user_verifications SET expires_at = 1 WHERE verification_code = :verification_code');
+            // Mark the user as verified and update `expires_at` to NULL in `user_verifications`
+            $updateStmt = $this->db->prepare('UPDATE user_verifications SET expires_at = NULL WHERE verification_code = :verification_code');
             $updateStmt->execute(['verification_code' => $verificationCode]);
 
             // Update the user's verified status in the `users` table

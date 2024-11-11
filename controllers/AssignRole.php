@@ -45,7 +45,7 @@ try {
 }
 
 // Check if the user is an admin (role_id 3)
-if ($userRoleId !== 3) {
+if ($userRoleId != 3) {
     http_response_code(403); // Forbidden
     echo json_encode(['status' => 'error', 'message' => 'Access denied: Admin privileges required.']);
     exit();
